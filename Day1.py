@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
-Parse File
-'''
 def read_file(file_path):
+  '''
+  Parse File
+  '''
   # Initialize lists
   first_numbers = []
   second_numbers = []
@@ -24,29 +24,29 @@ def read_file(file_path):
 
   return first_numbers, second_numbers
 
-'''
-Part 1
-'''
 def distance_list(first, second):
+  '''
+  Part 1
+  '''
   distances = []
   for a, b in zip(first, second):
     distances.append(abs(a - b))
 
   return distances
 
-'''
-Part 2
-'''
 def similarity_list(first, second):
+  '''
+  Part 2
+  '''
   sims = []
   for a in first:
     sims.append(a * second.count(a))
   return sims
 
-'''
-Main function
-'''
 def main():
+  '''
+  Main function
+  '''
   print("Day 1")
   file_path = "inputs/day1.txt"
   l1, l2 = read_file(file_path)
